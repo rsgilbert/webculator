@@ -1,0 +1,16 @@
+{% block navbar %}
+<nav class="nav bg-dark navbar">
+    <li class="navbar-brand">
+        <a href="{{ url_for('home') }}" class="text-light">webculator</a>
+    </li>
+    <li>
+        <a href="{{ url_for('sum') }}">Sum</a>
+    </li>
+    <li>
+        <a href="{{ url_for('product') }}">Product</a>
+    </li>
+    <li>
+        <a href="{{ url_for('average') }}">Average</a>
+    </li>
+</nav>
+{% endblock %}

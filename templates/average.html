@@ -1,0 +1,8 @@
+{% extends 'skeleton.html' %}
+{% block content %}
+    {% if total %}
+        <h1>Total is {{ total }}</h1>
+    {% else %}
+        <h1>Total: {{ total }}</h1>
+    {% endif %}
+{% endblock %}
