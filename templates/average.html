@@ -1,8 +1,42 @@
 {% extends 'skeleton.html' %}
 {% block content %}
-    {% if total %}
-        <h1>Total is {{ total }}</h1>
-    {% else %}
-        <h1>Total: {{ total }}</h1>
-    {% endif %}
+
+    <div class="card bg-light my-4">
+        <div class="card-header">
+            Average of two numbers
+        </div>
+        <div class="card-body">
+            <form method="POST" >
+                <div class="form-group">
+                    <label for="x-value" >
+                        x-value
+                    </label>
+                    <input 
+                        id="x-value"
+                        type="number" 
+                        name="x-value" 
+                        place-holder="x-value"
+                        class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <label for="y-value" >
+                        y-value
+                    </label>
+                    <input 
+                        id="y-value"
+                        type="number" 
+                        name="y-value" 
+                        place-holder="y-value"
+                        class="form-control"/>
+                </div>
+                <button type="submit" class="btn btn-block bg-dark text-light">COMPUTE AVERAGE</button>
+            </form> 
+        </div>
+    </div>
+    {% if avg %}
+    <div class="bg-success p-1 text-light d-flex justify-content-center" >
+        <p class="my-1">The average is <b>{{ avg }}</b></p>
+    </div>
+{% endif %}
 {% endblock %}
+

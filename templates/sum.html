@@ -33,9 +33,9 @@
             </form> 
         </div>
     </div>
-    {% if total %}
+    {% if total != None %}
     <div class="bg-success p-1 text-light d-flex justify-content-center" >
-        <p class="mt-1">The sum is <b>{{ total }}</b></p>
+        <p class="my-1">The sum is <b>{{ total }}</b></p>
     </div>
 {% endif %}
 {% endblock %}

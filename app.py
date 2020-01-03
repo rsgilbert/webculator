@@ -5,11 +5,11 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return "Hello Gilbert"
+    return render_template('home.html')
 
 
 @app.route('/sum', methods=['GET', 'POST'])
-def sum(total=12):
+def sum(total=None):
     if request.form:
         x, y = request.form.values()
         total = sumer(x, y)
